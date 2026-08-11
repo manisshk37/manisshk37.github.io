@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Swati ❤️</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;min-height:100%;font-family:Georgia,"Times New Roman",serif}
+body{
+  overflow-x:hidden;
+  color:#fff;
+  background:radial-gradient(circle at 50% 20%,#5b1f55 0,#24113d 42%,#09051b 100%);
+}
+#stars,.hearts,.balloons{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.star{
+  position:absolute;width:3px;height:3px;background:#fff;border-radius:50%;
+  animation:twinkle 2s infinite alternate;
+}
+@keyframes twinkle{from{opacity:.15;transform:scale(.7)}to{opacity:1;transform:scale(1.4)}}
+
+.balloon{
+  position:absolute;bottom:-140px;width:54px;height:70px;border-radius:50% 50% 45% 45%;
+  opacity:.82;animation:rise linear infinite;
+}
+.balloon:after{content:"";position:absolute;bottom:-85px;left:50%;height:90px;border-left:1px solid rgba(255,255,255,.4)}
+.balloon:nth-child(1){left:8%;background:#ff6fae;animation-duration:12s}
+.balloon:nth-child(2){left:27%;background:#ffd166;animation-duration:15s;animation-delay:3s}
+.balloon:nth-child(3){left:70%;background:#7dd3fc;animation-duration:13s;animation-delay:1s}
+.balloon:nth-child(4){left:88%;background:#c084fc;animation-duration:17s;animation-delay:5s}
+@keyframes rise{to{transform:translateY(-125vh) rotate(10deg)}}
+
+main{position:relative;z-index:2;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:50px 18px}
+.card{
+  width:min(900px,100%);text-align:center;padding:58px 30px 48px;
+  background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.18);
+  border-radius:30px;box-shadow:0 25px 80px rgba(0,0,0,.45);
+  backdrop-filter:blur(10px);animation:cardIn 1.4s ease;
+}
+@keyframes cardIn{from{opacity:0;transform:translateY(35px) scale(.97)}to{opacity:1;transform:none}}
+.small{letter-spacing:4px;text-transform:uppercase;color:#ffd8eb;font-size:13px}
+h1{font-size:clamp(48px,10vw,92px);margin:14px 0 6px;color:#fff0f7;text-shadow:0 0 25px #ff70ad}
+.name{font-size:clamp(40px,8vw,75px);color:#ff9fc8;text-shadow:0 0 20px rgba(255,105,170,.7)}
+.divider{width:100px;height:2px;background:#ff9fc8;margin:25px auto}
+.message{max-width:680px;margin:auto;font-size:20px;line-height:1.9;color:#f8eaf2}
+.quote{margin:28px auto 0;max-width:620px;font-style:italic;color:#ffd5e7;font-size:18px;line-height:1.7}
+button{
+  margin-top:34px;border:0;border-radius:999px;padding:15px 28px;font-size:16px;
+  font-weight:bold;cursor:pointer;color:#40132e;background:#ffd2e5;
+  box-shadow:0 8px 25px rgba(255,100,170,.3);transition:.25s;
+}
+button:hover{transform:translateY(-3px) scale(1.03);background:#fff}
+.footer{margin-top:28px;font-size:13px;color:#cdb6ca;letter-spacing:1px}
+
+#confetti{position:fixed;inset:0;z-index:10;pointer-events:none}
+.confetti-piece{position:absolute;top:-20px;width:8px;height:14px;animation:fall 3s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+
+.heart{
+ position:absolute;color:#ff9fc8;font-size:20px;animation:floatHeart 5s linear forwards;
+}
+@keyframes floatHeart{
+ from{transform:translateY(0) scale(.6);opacity:0}
+ 15%{opacity:1}
+ to{transform:translateY(-110vh) translateX(80px) scale(1.5);opacity:0}
+}
+
+.countdown-wrap{margin:30px auto 0;max-width:700px}
+.countdown-title{font-size:16px;letter-spacing:2px;text-transform:uppercase;color:#ffd8eb;margin-bottom:14px}
+.countdown{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.time-box{min-width:105px;padding:15px 12px;border-radius:18px;background:rgba(255,159,200,.11);border:1px solid rgba(255,210,229,.2);box-shadow:0 0 22px rgba(255,105,170,.12)}
+.time-box strong{display:block;font-size:35px;color:#fff;text-shadow:0 0 14px rgba(255,159,200,.8)}
+.time-box span{font-size:11px;letter-spacing:2px;color:#ffd5e7;text-transform:uppercase}
+.birthday-live{font-size:clamp(28px,6vw,54px);color:#ffb3d2;text-shadow:0 0 25px #ff70ad;animation:pulse 1s infinite alternate}
+@keyframes pulse{to{transform:scale(1.04);text-shadow:0 0 40px #ff70ad}}
+
+.surprise-popup{position:fixed;inset:0;z-index:30;display:none;align-items:center;justify-content:center;background:rgba(5,2,15,.82);backdrop-filter:blur(7px);padding:20px}
+.surprise-card{position:relative;width:min(420px,92vw);padding:30px 22px 34px;text-align:center;border-radius:28px;background:linear-gradient(145deg,#3a1742,#160b29);border:1px solid rgba(255,255,255,.2);box-shadow:0 25px 90px rgba(0,0,0,.7);animation:popIn .45s ease}
+@keyframes popIn{from{opacity:0;transform:scale(.65) rotate(-4deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+.monkey{width:min(280px,75vw);height:230px;object-fit:cover;border-radius:22px;margin:5px auto 18px;display:block;box-shadow:0 10px 35px rgba(0,0,0,.45)}
+.joke{font-family:Arial,sans-serif;font-size:34px;font-weight:900;color:#ffd1e5;text-shadow:0 0 15px rgba(255,105,170,.7)}
+.close-btn{margin-top:22px;padding:10px 22px;border:0;border-radius:999px;background:#ffd2e5;color:#40132e;font-weight:bold;cursor:pointer}
+
+@media(max-width:600px){.time-box{min-width:75px}.time-box strong{font-size:27px}}
+
+@media(max-width:600px){
+ .card{padding:42px 20px}
+ .message{font-size:17px;line-height:1.75}
+ .quote{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<div id="stars"></div>
+<div class="balloons"><span class="balloon"></span><span class="balloon"></span><span class="balloon"></span><span class="balloon"></span></div>
+<div class="hearts" id="hearts"></div>
+<div id="confetti"></div>
+
+<main>
+  <section class="card">
+    <div class="small">A little message from your friend</div>
+    <h1>Happy Birthday</h1>
+    <div class="name">Swati ❤️</div>
+    <div class="divider"></div>
+
+    <p class="message">
+      Today is a special reminder of how lucky I am to have a friend like you.
+      Thank you for all the little moments, the conversations, the laughter,
+      and the memories that make our friendship so special.
+      <br><br>
+      I hope this new year of your life brings you endless happiness,
+      beautiful surprises, peaceful moments, and every dream your heart is
+      quietly wishing for.
+    </p>
+
+    <p class="quote">
+      “Some people come into our lives and quietly make them brighter.
+      You are one of those people. Never stop being the wonderful person you are.”
+    </p>
+
+
+    <div class="countdown-wrap">
+      <div class="countdown-title">🎂 Countdown to Swati's Birthday</div>
+      <div class="countdown" id="countdown">
+        <div class="time-box"><strong id="days">00</strong><span>Days</span></div>
+        <div class="time-box"><strong id="hours">00</strong><span>Hours</span></div>
+        <div class="time-box"><strong id="minutes">00</strong><span>Minutes</span></div>
+        <div class="time-box"><strong id="seconds">00</strong><span>Seconds</span></div>
+      </div>
+    </div>
+
+    <button onclick="celebrate()">🎁 Click for a Birthday Surprise</button>
+    <div class="footer">Made with friendship, memories & lots of good wishes 💕</div>
+  </section>
+
+<div class="surprise-popup" id="surprisePopup">
+  <div class="surprise-card">
+    <img class="monkey" src="https://media.giphy.com/media/9MFsKQ8A6HCN2/giphy.gif" alt="Funny monkey">
+    <div class="joke">Bandriya Kahi Ki 😂🐒</div>
+    <button class="close-btn" onclick="closeSurprise()">Okay 😂</button>
+  </div>
+</div>
+</main>
+
+<script>
+const stars=document.getElementById("stars");
+for(let i=0;i<90;i++){
+  const s=document.createElement("span");
+  s.className="star";
+  s.style.left=Math.random()*100+"%";
+  s.style.top=Math.random()*100+"%";
+  s.style.animationDelay=(Math.random()*2)+"s";
+  stars.appendChild(s);
+}
+
+function heart(){
+  const h=document.createElement("span");
+  h.className="heart";
+  h.textContent=["❤️","💗","💕","✨"][Math.floor(Math.random()*4)];
+  h.style.left=Math.random()*100+"%";
+  h.style.bottom="-30px";
+  h.style.animationDuration=(4+Math.random()*4)+"s";
+  document.getElementById("hearts").appendChild(h);
+  setTimeout(()=>h.remove(),8000);
+}
+setInterval(heart,900);
+
+
+// Live countdown to 15 August 2026, 00:00 IST.
+const birthdayTime = new Date("2026-08-15T00:00:00+05:30").getTime();
+
+function updateCountdown(){
+  const now = Date.now();
+  let diff = birthdayTime - now;
+
+  if(diff <= 0){
+    document.getElementById("countdown").innerHTML =
+      '<div class="birthday-live">🎉 HAPPY BIRTHDAY SWATI! ❤️🎂</div>';
+    return;
+  }
+
+  const day = Math.floor(diff / 86400000);
+  diff %= 86400000;
+  const hour = Math.floor(diff / 3600000);
+  diff %= 3600000;
+  const minute = Math.floor(diff / 60000);
+  const second = Math.floor((diff % 60000) / 1000);
+
+  document.getElementById("days").textContent = String(day).padStart(2,"0");
+  document.getElementById("hours").textContent = String(hour).padStart(2,"0");
+  document.getElementById("minutes").textContent = String(minute).padStart(2,"0");
+  document.getElementById("seconds").textContent = String(second).padStart(2,"0");
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+function celebrate(){
+  document.getElementById("surprisePopup").style.display="flex";
+  document.body.style.overflow="hidden";
+  const box=document.getElementById("confetti");
+  for(let i=0;i<140;i++){
+    const c=document.createElement("span");
+    c.className="confetti-piece";
+    c.style.left=Math.random()*100+"%";
+    c.style.background=["#ff6fae","#ffd166","#7dd3fc","#c084fc","#ffffff"][Math.floor(Math.random()*5)];
+    c.style.transform=`rotate(${Math.random()*360}deg)`;
+    c.style.animationDelay=(Math.random()*.8)+"s";
+    c.style.animationDuration=(2+Math.random()*2)+"s";
+    box.appendChild(c);
+  }
+  setTimeout(()=>box.innerHTML="",5000);
+  for(let i=0;i<25;i++) setTimeout(heart,i*70);
+}
+setTimeout(()=>{ for(let i=0;i<8;i++) setTimeout(heart,i*100); },1200);
+
+function closeSurprise(){
+  document.getElementById("surprisePopup").style.display="none";
+  document.body.style.overflow="";
+}
+</script>
+</body>
+</html>
